@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://wb1qd4wheyw4"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_jjolk"]
+
+[sub_resource type="CameraTexture" id="CameraTexture_jaf16"]
+camera_feed_id = 1
+camera_is_active = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uioqj"]
+albedo_texture = SubResource("CameraTexture_jaf16")
+
+[node name="Node3D" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.0579474, 0, 0.998319, 0, 1, 0, -0.998319, 0, 0.0579474, 0, 0, 0)
+mesh = SubResource("BoxMesh_jjolk")
+surface_material_override/0 = SubResource("StandardMaterial3D_uioqj")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
